@@ -8,7 +8,7 @@
 
   inputs.flake-utils.url = "github:numtide/flake-utils";
 
-  inputs.systems.url = "path:./systems.nix";
+  inputs.systems.url = "self";
   inputs.systems.flake = false;
 
   outputs = {
