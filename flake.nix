@@ -8,9 +8,6 @@
 
   inputs.flake-utils.url = "github:numtide/flake-utils";
 
-  inputs.systems.url = "self";
-  inputs.systems.flake = false;
-
   outputs = {
     self,
     nixpkgs,
@@ -19,6 +16,7 @@
     systems,
     cc-server,
   }: let
+    systems = import ./systems.nix;
     buildEfi = pkgs: pkgs.callPackage ./. {};
   in
     {
